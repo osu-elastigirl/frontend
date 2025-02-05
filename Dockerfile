@@ -1,4 +1,4 @@
-FROM node:latest as node
+FROM node:latest AS node
 
 # Set the working directory
 WORKDIR /usr/src/app
