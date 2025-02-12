@@ -1,0 +1,32 @@
+.prompt{
+  input{
+    border: 1px solid #a4a4a4;
+    background-color: inherit;
+    border-radius: 5px;
+    color: #a4a4a4;
+    padding: .3%;
+    margin: .5%;
+    width: 60%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  button{
+    width: 5%;
+  }
+
+  input, button{
+    height: 5%;
+    font-size: medium;
+  }
+}
+input::placeholder{
+  text-align: center;
+}
+
+.prompt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
