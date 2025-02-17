@@ -11,12 +11,12 @@
     box-sizing: border-box;
   }
 
-  button{
+  .besidePrompt{
     width: 5%;
   }
 
   input, button{
-    height: 5%;
+    max-height: 6%;
     font-size: medium;
   }
 }
@@ -28,5 +28,12 @@ input::placeholder{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+}
+
+.title{
+  text-align: center;
+  font-size: 5em;
+  color: #a4a4a4;
+  padding: 5%;
+  height: 10%;
 }
