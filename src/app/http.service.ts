@@ -7,11 +7,11 @@ import { Stock } from './stock';
 })
 export class HttpService {
 
-  private url = 'http://localhost:5001/';
+  private url = 'http://127.0.0.1:8000';
 
   constructor(private http: HttpClient) { }
 
   getStocksFromPrompt(prompt: string) {
-    return this.http.post<[Stock]>(this.url + 'description', { description: prompt });
+    return this.http.post<[Stock]>(this.url + '/description', { description: prompt });
   }
 }

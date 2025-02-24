@@ -4,8 +4,11 @@
   *{
     display: inline-block;
     margin: 1%;
+    align-items: start;
+    height: 100%;
   }
   text-align: center;
+  min-height: 2em;
 }
 
 .ticker{
