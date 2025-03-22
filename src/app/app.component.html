@@ -1,11 +1,12 @@
 <div class="title">Elastigirl App</div>
 <div class="prompt">
-  <div class="besidePrompt"></div>
-  <input type="text" [(ngModel)]="prompt" placeholder="Enter your prompt"/>
-  <button (click)="submit()" class="besidePrompt">Submit</button>
+  <div class="input-row">
+    <input type="text" [(ngModel)]="prompt" placeholder="Enter your prompt"/>
+    <button (click)="submit()" class="besidePrompt">Submit</button>
+  </div>
+  <img src="graph.png" alt="Graph image" class="graph">
 </div>
 <div class="stocks">
   <app-stock *ngFor="let stock of stocks" [stock]="stock"></app-stock>
 </div>
-
-<router-outlet />
+<router-outlet></router-outlet>
