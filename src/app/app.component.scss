@@ -1,38 +1,73 @@
-.prompt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  .input-row {
-    display: flex;
-    align-items: center; 
+:host {
+  display: block;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  width: 33.33%;
+  background-color: #ddd; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  gap: 0px; 
+  padding: 0%; 
+
+  img {
+    max-width: 100%;
+    height: 50vh;
+    object-fit: cover
   }
   
+}
+
+
+.right {
+  width: 66.67%;
+  background-color: #191515;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.angular-content {
+  width: 90%; 
+}
+
+.prompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   input {
-    border: 1px solid  #383434;
+    border: 1px solid #a4a4a4;
     background-color: inherit;
     border-radius: 5px;
-    color:  #383434;
+    color: #a4a4a4;
     padding: 0.3%;
     margin: 0.5%;
     width: 60%;
     text-align: center;
     box-sizing: border-box;
   }
-  
+
   .besidePrompt {
-    margin-left: 0.5%;
-  }
-  
-  input, button {
-    max-height: 5%;
-    font-size: medium;
+    width: 7%;
   }
 
-  .graph {
-    max-width: 300px; 
-    width: 100%;
-    margin-top: 15px;  
+  input,
+  button {
+    max-height: 5%;
+    font-size: medium;
   }
 }
 
@@ -43,7 +78,7 @@ input::placeholder {
 .title {
   text-align: center;
   font-size: 5em;
-  color: #383434;
+  color: #a4a4a4;
   padding: 5%;
   height: 10%;
 }

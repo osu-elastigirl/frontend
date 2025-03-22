@@ -1,12 +1,27 @@
-<div class="title">Elastigirl App</div>
-<div class="prompt">
-  <div class="input-row">
-    <input type="text" [(ngModel)]="prompt" placeholder="Enter your prompt"/>
-    <button (click)="submit()" class="besidePrompt">Submit</button>
+<div class="container">
+
+  <div class="left">
+    <img src="blue3.jpg" alt="Left Side Image">
+    <img src="graph2.png" alt="Left Side Image">
+    <img src="blue3.jpg" alt="Left Side Image">
+
   </div>
-  <img src="graph.png" alt="Graph image" class="graph">
+  
+
+
+
+  <div class="right">
+    <div class="angular-content">
+      <div class="title">Elastigirl App</div>
+      <div class="prompt">
+        <div class="besidePrompt"></div>
+        <input type="text" [(ngModel)]="prompt" placeholder="Enter your prompt"/>
+        <button (click)="submit()" class="besidePrompt">Submit</button>
+      </div>
+      <div class="stocks">
+        <app-stock *ngFor="let stock of stocks" [stock]="stock"></app-stock>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
-<div class="stocks">
-  <app-stock *ngFor="let stock of stocks" [stock]="stock"></app-stock>
-</div>
-<router-outlet></router-outlet>
