@@ -1,27 +1,45 @@
 <div class="container">
-
   <div class="left">
     <img src="blue3.jpg" alt="Left Side Image">
     <img src="graph2.png" alt="Left Side Image">
     <img src="blue3.jpg" alt="Left Side Image">
-
   </div>
-  
-
-
 
   <div class="right">
     <div class="angular-content">
       <div class="title">Elastigirl App</div>
+
       <div class="prompt">
         <div class="besidePrompt"></div>
         <input type="text" [(ngModel)]="prompt" placeholder="Enter your prompt"/>
         <button (click)="submit()" class="besidePrompt">Submit</button>
       </div>
+
       <div class="stocks">
         <app-stock *ngFor="let stock of stocks" [stock]="stock"></app-stock>
       </div>
+
       <router-outlet></router-outlet>
+
+
+      <div class="icons">
+        <div class="down-arrow">
+          &#8595;
+        </div>
+
+
+        <div class="scene">
+          <div class="cube">
+            <div class="cube__face cube__face--front"></div>
+            <div class="cube__face cube__face--back"></div>
+            <div class="cube__face cube__face--right"></div>
+            <div class="cube__face cube__face--left"></div>
+            <div class="cube__face cube__face--top"></div>
+            <div class="cube__face cube__face--bottom"></div>
+          </div> 
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
