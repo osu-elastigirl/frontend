@@ -17,10 +17,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40vw; /* Adjusted width relative to viewport width */
-    max-width: 400px; /* Ensuring it doesn't get too large */
-    height: 40vh; /* Adjusted height relative to viewport height */
-    max-height: 300px; /* Ensuring it doesn't get too large */
+    width: 40vw; 
+    max-width: 400px; 
+    height: 40vh; 
+    max-height: 300px; 
     justify-content: center;
 }
 
