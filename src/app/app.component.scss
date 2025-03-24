@@ -29,7 +29,7 @@
 
 .right {
   width: 66.67%;
-  background-color: #000000;
+  background-color: #000000; //i think change this later? 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +66,8 @@
   button {
     max-height: 5%;
     font-size: medium;
+    white-space: nowrap; 
+    min-width: 100px !important;
   }
 }
 
