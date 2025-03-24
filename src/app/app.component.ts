@@ -23,6 +23,5 @@ export class AppComponent {
     this.http.getStocksFromPrompt(this.prompt).subscribe((data) => {
       this.stocks = data;
     });
-    console.log(this.stocks);
   }
 }
