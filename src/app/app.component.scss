@@ -12,13 +12,13 @@
 
 .left {
   width: 33.33%;
-  background-color: #ddd; 
+  background-color: #ddd;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0px; 
-  padding: 0%; 
+  gap: 0px;
+  padding: 0%;
 
   img {
     max-width: 100%;
@@ -27,9 +27,17 @@
   }
 }
 
+.stocks-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
 .right {
   width: 66.67%;
-  background-color: #000000; //i think change this later? 
+  background-color: #000000; //i think change this later?
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +46,8 @@
 }
 
 .angular-content {
-  width: 100%; 
+  width: 100%;
+  color: white;
 }
 
 .prompt {
@@ -66,7 +75,7 @@
   button {
     max-height: 5%;
     font-size: medium;
-    white-space: nowrap; 
+    white-space: nowrap;
     min-width: 100px !important;
   }
 }

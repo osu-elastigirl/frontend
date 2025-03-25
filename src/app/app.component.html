@@ -12,11 +12,19 @@
       <div class="prompt">
         <div class="besidePrompt"></div>
         <input type="text" [(ngModel)]="prompt" placeholder="Enter your prompt"/>
-        <button (click)="submit()" class="besidePrompt">get stocks!</button>
+        <button (click)="submit()" class="besidePrompt" (keydown.enter)="submit()">get stocks!</button>
       </div>
 
-      <div class="stocks">
-        <app-stock *ngFor="let stock of stocks" [stock]="stock"></app-stock>
+      <div class="stocks-container">
+        <div class="stocks">
+          <app-stock *ngFor="let stock of stocks" [stock]="stock"></app-stock>
+        </div>
+
+        <table>
+          <tr>
+            <th *ngFor="let metric of metricNames">{{ metric }}</th>
+          </tr>
+        </table>
       </div>
 
       <router-outlet></router-outlet>
@@ -36,7 +44,7 @@
             <div class="cube__face cube__face--left"></div>
             <div class="cube__face cube__face--top"></div>
             <div class="cube__face cube__face--bottom"></div>
-          </div> 
+          </div>
         </div>
       </div>
 

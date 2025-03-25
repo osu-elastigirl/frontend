@@ -15,6 +15,7 @@ import { Stock } from './stock';
 export class AppComponent {
   prompt = "";
   stocks: Stock[] = [];
+  metricNames: string[] = [];
 
   constructor(private http: HttpService) {}
 
@@ -22,6 +23,7 @@ export class AppComponent {
     console.log(this.prompt);
     this.http.getStocksFromPrompt(this.prompt).subscribe((data) => {
       this.stocks = data;
+      this.metricNames = Object.keys(this.stocks[0].metrics);
     });
   }
 }
