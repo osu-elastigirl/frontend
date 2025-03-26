@@ -1,12 +1,10 @@
 FROM node:23 AS node
+RUN useradd -ms /bin/sh -u 1001 app
 
 # Set the working directory
 WORKDIR /usr/src/app
 
-# Copy the package.json file
-COPY package-lock.json /usr/src/app/
-
-COPY . /usr/src/app/
+COPY --chown=app:app . /usr/src/app
 
 RUN npm install -g npm@latest
 
