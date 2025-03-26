@@ -21,7 +21,7 @@
         </div>
 
         <table>
-          <tr>
+          <tr *ngFor="let stock of stocks">
             <th *ngFor="let metric of metricNames">{{ metric }}</th>
           </tr>
         </table>
