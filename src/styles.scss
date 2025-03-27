@@ -29,3 +29,11 @@ button:hover{
   transition: 500ms;
   cursor: pointer;
 }
+
+a{
+  color:white !important;
+  text-decoration: none ;
+}
+a:active, a:hover{
+  color: #a4a4a4 !important;
+}

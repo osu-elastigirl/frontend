@@ -5,49 +5,118 @@
   padding: 0;
 }
 
+.ticker{
+  align-content: center;
+  justify-content: center;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+th, td {
+  display:table-cell;
+  overflow: scroll;
+  padding: 10px;
+  max-height: 100px;
+  width:max-content;
+  max-width: 500px;
+  background-color: rgb(26, 26, 26);
+  border: solid 1px #000;
+  border-style: none solid solid none;
+  a{
+    color: white !important;
+  }
+}
+
 .container {
   display: flex;
   height: 100%;
 }
 
-// .left {
-//   width: 33.33%;
-//   background-color: #ddd;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 0px;
-//   padding: 0%;
+tr th:first-child { border-top-left-radius: 10px;  border-bottom-left-radius: 10px; }
+tr th:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
 
-//   img {
-//     max-width: 100%;
-//     height: 50vh;
-//     object-fit: cover;
-//   }
-// }
+tr td:first-child { border-top-left-radius: 10px;  border-bottom-left-radius: 10px; }
+tr td:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+tr:first-child td { border-top-style: solid; }
+tr td:first-child { border-left-style: solid; }
+
+.cell-content{
+  display: block;
+  height:100%;
+  text-wrap: wrap;
+  line-height: 1.5;
+  *{
+    text-wrap: normal;
+  }
+  overflow-y: scroll;
+  a, a:link, a:visited, a:focus, a:hover, a:active{
+    color: white !important;
+    text-decoration: none;
+  }
+}
+
+.table-container{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+table {
+  overflow-y: scroll;
+  height: 100%;
+  padding:5px;
+  border-spacing: 0 10px;
+  tr{
+    overflow-y: scroll;
+  }
+}
 
 .stocks-container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-grow: 0;
+  height: 100%;
   justify-content: center;
+  justify-items: center;
+  align-content: center;
   align-items: center;
-  padding-right: 10px;
+  overflow-y: scroll;
 }
 
 .right {
   width: 100%;
+  height: 100%;
+  // padding: 10px;
   background-color: #000000; //i think change this later?
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  perspective: 600px;
+  // position: relative;
+  // perspective: 600px;
 }
 
 .angular-content {
   width: 100%;
+  height: 100%;
   color: white;
+  display: grid;
+  grid-template-rows: 20% 30% auto;
+  overflow-y: scroll;
+}
+
+form{
+  display:flex;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .prompt {
@@ -86,11 +155,9 @@ input::placeholder {
 
 .title {
   text-align: center;
+  align-self: end;
   font-size: 5em;
   color: #dddbdb;
-  padding: 5%;
-  height: 10%;
-  margin-top: -350px;
 }
 
 .stocks {
