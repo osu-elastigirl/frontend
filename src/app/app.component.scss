@@ -34,6 +34,7 @@ th, td {
 .container {
   display: flex;
   height: 100%;
+  background-color: #000000; //i think change this later?
 }
 
 tr th:first-child { border-top-left-radius: 10px;  border-bottom-left-radius: 10px; }
@@ -106,8 +107,29 @@ table {
   height: 100%;
   color: white;
   display: grid;
-  grid-template-rows: 20% 30% auto;
+  grid-template-rows: 30% auto;
   overflow-y: scroll;
+}
+
+.content{
+  overflow-y: scroll;
+}
+
+.back{
+  height: min-content;
+  border-radius: calc(infinity * 1px);
+  position: absolute;
+  background-color: transparent;
+  color: white;
+  border-width: 2px;
+  padding:10px 15px;
+  border-color: white;
+  font-size: 16px;
+}
+.back:hover{
+  background-color: white;
+  color: #000000;
+  border-color: #000000;
 }
 
 form{
@@ -153,11 +175,17 @@ input::placeholder {
   text-align: center;
 }
 
-.title {
+.title-container {
   text-align: center;
-  align-self: end;
   font-size: 5em;
-  color: #dddbdb;
+  align-self: center;
+}
+.title{
+  color: white;
+}
+.title:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .stocks {

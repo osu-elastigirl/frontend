@@ -1,6 +1,6 @@
 @switch(metricName){
   @case('recommendation_trends'){
-      <google-chart [data]="data" [type]="chartType" [width]="150" [dynamicResize]="true" [options]="options" [columns]="columns" style="max-width:200px; height:100%;" ></google-chart>
+      <google-chart [data]="data" [type]="chartType" [dynamicResize]='true' [options]="options" [columns]="columns" style="width: 450px; align-content: center; align-items: center; align-self: center;"></google-chart>
   }
   <!-- @case('recommendation_trends'){
     @let data = logThis();

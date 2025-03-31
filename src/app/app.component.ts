@@ -9,10 +9,12 @@ import { test_data } from '../assets/test_data.json';
 import { HandlersService } from './handlers.service';
 import { GoogleChartsModule, ChartType } from 'angular-google-charts';
 import { VisualizationComponent } from './visualization/visualization.component';
+import { ResultsComponent } from './results/results.component';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, FormsModule, GoogleChartsModule, VisualizationComponent],
+  imports: [RouterOutlet, CommonModule, FormsModule, GoogleChartsModule, VisualizationComponent, ResultsComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -22,12 +24,12 @@ export class AppComponent {
   metricNames: string[] = [];
   handlers = new HandlersService();
   loading = false;
-  testChartData = this.recommendationData(test_data[0], 'recommendation_trends');
   chartType: ChartType = ChartType['ColumnChart'];
   options ={
     "isStacked": "true",
     'legend': { position: 'none' },
   }
+  atHome: boolean = true;
 
   nameMapping: {[key:string]:string} = {
     'company_news': 'Company News',
@@ -37,25 +39,10 @@ export class AppComponent {
     'recommendation_trends': 'Recommendation Trends',
   }
 
-  constructor(private http: HttpService) {}
-
-  recommendationData(stock: Stock, metricName: string){
-    let recommendations = stock.metrics[metricName];
-    // let data: (string | number)[][] = [["Period", "Strong Buy", "Buy", "Hold", "Sell", "Strong Sell"]];
-    let data: (string | number)[][] = [];
-    for(var i=0; i<recommendations.length; i++){
-      let recommendation = recommendations[i];
-      let period = recommendation['period'];
-      let strongBuy = recommendation['strongBuy'];
-      let buy = recommendation['buy'];
-      let hold = recommendation['hold'];
-      let sell = recommendation['sell'];
-      let strongSell = recommendation['strongSell'];
-      data.push([period, strongBuy, buy, hold, sell, strongSell]);
-    }
-    // data = data[0].map((_, colIndex) => data.map(row => row[colIndex]));
-    console.log(data);
-    return data;
+  constructor(private http: HttpService, private route: ActivatedRoute, private router: Router) {
+    router.events.subscribe((val) => {
+      this.atHome = this.router.url === '/';
+    });
   }
 
   submit(promptForm: NgForm){
@@ -69,11 +56,9 @@ export class AppComponent {
         }
       }
       this.loading = false;
+
     });
     promptForm.reset();
-    // this.stocks = test_data;
-    // console.log(this.stocks);
-    // this.metricNames = Object.keys(this.stocks[0].metrics);
 
   }
 

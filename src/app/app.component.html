@@ -1,45 +1,13 @@
 <div class="container">
-  <!-- <div class="left">
-    <img src="blue3.jpg" alt="Left Side Image">
-    <img src="graph2.png" alt="Left Side Image">
-    <img src="blue3.jpg" alt="Left Side Image">
-  </div> -->
-
-  <div class="right">
+    <button [routerLink]="['']" routerLinkActive="router-link-active" class="back" *ngIf="!atHome">Back</button>
     <div class="angular-content">
-      <div class="title">unnamed.</div>
-
-      <div class="prompt">
-        <div class="besidePrompt"></div>
-        <form #promptForm="ngForm" (ngSubmit)="submit(promptForm)">
-          <input type="text" [(ngModel)]="prompt" name="prompt" placeholder="Enter your prompt"/>
-          <button class="besidePrompt">get stocks!</button>
-        </form>
+      <div class="title-container">
+        <a [routerLink]="['']" routerLinkActive="router-link-active" class="title">unnamed.</a>
       </div>
 
-      <div class="table-container">
-        <!-- <google-chart [options]="options" [data]="testChartData" [type]="chartType" [columns]="['Period', 'Strong Buy', 'Buy', 'Hold', 'Sell', 'Strong Sell']"></google-chart> -->
-        <div *ngIf="loading" class="loading">Loading Data</div>
-        <div class="stocks-container" *ngIf="this.stocks.length > 0 && !loading">
-
-          <table>
-            <tr>
-              <th class="ticker">Ticker</th>
-              <th>Rationale</th>
-              <th *ngFor="let metricName of metricNames">{{nameMapping[metricName]}}</th>
-            </tr>
-            <tr *ngFor="let stock of stocks">
-              <td class="ticker">{{stock.ticker}}</td>
-              <td><div class="cell-content">{{stock.rationale}}</div></td>
-              <td *ngFor="let metric of metricNames"><div class='cell-content'><app-visualization [stock]="stock" [metricName]="metric"></app-visualization></div></td>
-            </tr>
-          </table>
-        </div>
+      <div class="content">
+        <router-outlet></router-outlet>
       </div>
 
     </div>
-  </div>
 </div>
-
-
-<router-outlet></router-outlet>

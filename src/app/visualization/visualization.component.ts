@@ -13,7 +13,7 @@ import { OnInit } from '@angular/core';
 export class VisualizationComponent implements OnInit {
   @Input() stock!: Stock;
   @Input() metricName!: string;
-  chartType: ChartType = ChartType['LineChart'];
+  chartType: ChartType = ChartType['SteppedAreaChart'];
   data: any;
 
   ngOnInit(): void {
@@ -23,14 +23,14 @@ export class VisualizationComponent implements OnInit {
   }
 
   options ={
-    'isStacked': 'true',
+    'isStacked': 'relative',
     'legend': {
       'textStyle': {
         'color': 'white',
       }
     },
-    'chartArea': {'left': 5, 'right': 5},
-    'fontSize': 8,
+    'chartArea': {'width':'50%'},
+    'fontSize': 10,
     series: [
       {color: '#F44336'},
       {color: '#FF9800'},
@@ -47,7 +47,7 @@ export class VisualizationComponent implements OnInit {
         'color': 'white'
       },
       'direction': -1,
-      'textPosition': 'none',
+      // 'textPosition': 'none',
     },
     'backgroundColor':{
       'fill': 'transparent',
@@ -55,7 +55,6 @@ export class VisualizationComponent implements OnInit {
     'tooltip':{
       'isHtml': true,
       'ignoreBounds': true,
-      'trigger': 'none',
     },
     'bar':{
       'groupWidth': '10',
