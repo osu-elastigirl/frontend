@@ -1,0 +1,9 @@
+<div class="prompt">
+  <div class="besidePrompt"></div>
+  <form #promptForm="ngForm" (ngSubmit)="submit(promptForm)">
+    <input type="text" [(ngModel)]="prompt" name="prompt" placeholder="Enter your prompt"/>
+    <button class="besidePrompt" [routerLink]="['/results', prompt]" routerLinkActive="router-link-active">get stocks!</button>
+  </form>
+</div>
+
+<router-outlet></router-outlet>
