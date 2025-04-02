@@ -1,0 +1,44 @@
+
+
+form{
+  display:flex;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.prompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    border: 1px solid #dddbdb;
+    background-color: inherit;
+    border-radius: 5px;
+    color: #dddbdb;
+    padding: 0.3%;
+    margin: 0.5%;
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .besidePrompt {
+    width: 7%;
+  }
+
+  input,
+  button {
+    max-height: 5%;
+    font-size: medium;
+    white-space: nowrap;
+    min-width: 100px !important;
+  }
+}
+
+input::placeholder {
+  text-align: center;
+}

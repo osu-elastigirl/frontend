@@ -1,0 +1,20 @@
+<div class="table-container">
+  <div *ngIf="loading" class="loading">Loading Data</div>
+  <div class="stocks-container" *ngIf="this.stocks.length > 0 && !loading">
+
+    <table>
+      <tr>
+        <th class="ticker">Ticker</th>
+        <th>Rationale</th>
+        <th *ngFor="let metricName of metricNames">{{nameMapping[metricName]}}</th>
+      </tr>
+      <tr *ngFor="let stock of stocks">
+        <td class="ticker">{{stock.ticker}}</td>
+        <td><div class="cell-content">{{stock.rationale}}</div></td>
+        <td *ngFor="let metric of metricNames"><app-visualization [stock]="stock" [metricName]="metric" style="align-items: center; align-content: center; justify-content: center; justify-items: center; display: flex;"></app-visualization></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
