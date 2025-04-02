@@ -1,0 +1,203 @@
+{"test_data":  [
+      {
+          "ticker": "COP",
+          "rationale": "COP has consistently high buy recommendations and strong buy recommendations and no sell recommendations which indicates strong analyst confidence.",
+          "metrics": {
+              "recommendation_trends": [
+                  {
+                      "buy": 21,
+                      "hold": 4,
+                      "period": "2025-03-01",
+                      "sell": 0,
+                      "strongBuy": 8,
+                      "strongSell": 0,
+                      "symbol": "COP"
+                  },
+                  {
+                      "buy": 20,
+                      "hold": 4,
+                      "period": "2025-02-01",
+                      "sell": 0,
+                      "strongBuy": 9,
+                      "strongSell": 0,
+                      "symbol": "COP"
+                  },
+                  {
+                      "buy": 18,
+                      "hold": 5,
+                      "period": "2025-01-01",
+                      "sell": 0,
+                      "strongBuy": 9,
+                      "strongSell": 0,
+                      "symbol": "COP"
+                  },
+                  {
+                      "buy": 15,
+                      "hold": 7,
+                      "period": "2024-12-01",
+                      "sell": 0,
+                      "strongBuy": 9,
+                      "strongSell": 0,
+                      "symbol": "COP"
+                  }
+              ],
+              "company_news": [],
+              "name": "ConocoPhillips",
+              "description": "ConocoPhillips explores for, produces, transports, and markets crude oil, bitumen, natural gas, liquefied natural gas (LNG), and natural gas liquids. The company operates in six segments: Alaska; Lower 48; Canada; Europe, Middle East and North Africa; Asia Pacific; and Other International. The company's portfolio includes unconventional plays in North America; conventional assets in North America, Europe, Asia, and Australia; global LNG developments; oil sands assets in Canada; and an inventory of global exploration prospects. It serves in the United States, Canada, China, Equatorial Guinea, Libya, Malaysia, Norway, Singapore, the United Kingdom, and internationally ConocoPhillips was founded in 1917 and is headquartered in Houston, Texas.",
+              "sector": "Energy",
+              "industry": "Oil & Gas E&P",
+              "location": "Houston",
+              "country": "United States",
+              "founded_year": "N/A",
+              "website": "https://www.conocophillips.com",
+              "price_earnings": "N/A"
+          }
+      },
+      {
+          "ticker": "CVX",
+          "rationale": "CVX also has very strong buy recommendations and strong buy recommendations and no sell recommendations, and Chevron is showing interest in exploring for hydrocarbons off the island of Crete.",
+          "metrics": {
+              "recommendation_trends": [
+                  {
+                      "buy": 15,
+                      "hold": 8,
+                      "period": "2025-03-01",
+                      "sell": 0,
+                      "strongBuy": 6,
+                      "strongSell": 0,
+                      "symbol": "CVX"
+                  },
+                  {
+                      "buy": 15,
+                      "hold": 8,
+                      "period": "2025-02-01",
+                      "sell": 0,
+                      "strongBuy": 6,
+                      "strongSell": 0,
+                      "symbol": "CVX"
+                  },
+                  {
+                      "buy": 16,
+                      "hold": 8,
+                      "period": "2025-01-01",
+                      "sell": 0,
+                      "strongBuy": 6,
+                      "strongSell": 0,
+                      "symbol": "CVX"
+                  },
+                  {
+                      "buy": 16,
+                      "hold": 8,
+                      "period": "2024-12-01",
+                      "sell": 0,
+                      "strongBuy": 6,
+                      "strongSell": 0,
+                      "symbol": "CVX"
+                  }
+              ],
+              "company_news": {
+                  "headline": {
+                      "0": "US oil producer Chevron interested in gas exploration in another two blocks off Crete, says Greece",
+                      "1": "US oil producer Chevron interested in hydrocarbons  in two blocs off Crete, says Greece",
+                      "2": "Greece says U.S. oil producer Chevron interested in looking for hydrocarbons off Crete",
+                      "3": "Energy Is 2025’s Biggest Stock Market Winner. Don’t Expect It to Last."
+                  },
+                  "summary": {
+                      "0": "ATHENS -Chevron has expressed an interest in hydrocarbon exploration off the island of Crete in the Mediterranean Sea, the second such expression for Greek energy by the U.S. oil producer this year, the Greek energy ministry said on Wednesday.  Greece has accepted Chevron's interest for two blocks south of Crete and will soon decide on the coordinates and on launching an international tender for the areas, which border two licensed blocks where an ExxonMobil-led consortium has been evaluating seismic data, the energy ministry said.  Chevron's new interest doubles the size of offshore blocks that will be made available for energy exploration to an area stretching 47,000 square kilometres, increasing the possibility of finding \"commercially exploitable\" reserves in Greek waters.",
+                      "1": "ATHENS - U.S. oil producer Chevron has expressed interest for hydrocarbons exploration off the island of Crete in the Mediterranean Sea, the Greek energy ministry said on Wednesday. ...",
+                      "2": "ATHENS, March 26 - U.S. oil producer Chevron hasexpressed interest for searching for hydrocarbons off the islandof Crete, the Greek energy ministry said on Wednesday. ...",
+                      "3": "Energy Is 2025’s Biggest Stock Market Winner. Don’t Expect It to Last."
+                  },
+                  "url": {
+                      "0": "https://finnhub.io/api/news?id=492e839fccb7a962ca7c706bec07fa51b49593b6d79e239b7de96e7e86ca2003",
+                      "1": "https://finnhub.io/api/news?id=65f8586c4381df730e2e8e451c368a765d7cb167d0d8e56d746715078f37aee7",
+                      "2": "https://finnhub.io/api/news?id=b323362e69268e9f2c3c575ebc5cbed77e20048e2efdb4fd809620ba3613b893",
+                      "3": "https://finnhub.io/api/news?id=0f621ef81dbc4bc41ef4cc59b6c7707620e6f7e9347b1b47f4a6200c6c163520"
+                  }
+              },
+              "name": "Chevron Corporation",
+              "description": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations in the United States and internationally. The company operates in two segments, Upstream and Downstream. The Upstream segment engages in the exploration, development, production, and transportation of crude oil and natural gas; liquefaction, transportation, and regasification of liquefied natural gas; transporting crude oil through pipelines; processing, transporting, storage, and marketing of natural gas; and carbon capture and storage, as well as a gas-to-liquids plant. The Downstream segment refines crude oil into petroleum products; markets crude oil, refined products, and lubricants; manufactures and markets renewable fuels; transports crude oil and refined products through pipeline, marine vessel, motor equipment, and rail car; and manufactures and markets commodity petrochemicals, plastics for industrial uses, and fuel and lubricant additives. The company was formerly known as ChevronTexaco Corporation and changed its name to Chevron Corporation in 2005. Chevron Corporation was founded in 1879 and is headquartered in Houston, Texas.",
+              "sector": "Energy",
+              "industry": "Oil & Gas Integrated",
+              "location": "Houston",
+              "country": "United States",
+              "founded_year": "N/A",
+              "website": "https://www.chevron.com",
+              "price_earnings": "N/A"
+          }
+      },
+      {
+          "ticker": "XOM",
+          "rationale": "XOM has consistently high buy recommendations and strong buy recommendations and low sell recommendations and is making investments into cleaner energy.",
+          "metrics": {
+              "recommendation_trends": [
+                  {
+                      "buy": 12,
+                      "hold": 12,
+                      "period": "2025-03-01",
+                      "sell": 1,
+                      "strongBuy": 7,
+                      "strongSell": 0,
+                      "symbol": "XOM"
+                  },
+                  {
+                      "buy": 13,
+                      "hold": 12,
+                      "period": "2025-02-01",
+                      "sell": 1,
+                      "strongBuy": 6,
+                      "strongSell": 0,
+                      "symbol": "XOM"
+                  },
+                  {
+                      "buy": 14,
+                      "hold": 12,
+                      "period": "2025-01-01",
+                      "sell": 1,
+                      "strongBuy": 6,
+                      "strongSell": 0,
+                      "symbol": "XOM"
+                  },
+                  {
+                      "buy": 14,
+                      "hold": 12,
+                      "period": "2024-12-01",
+                      "sell": 1,
+                      "strongBuy": 6,
+                      "strongSell": 0,
+                      "symbol": "XOM"
+                  }
+              ],
+              "company_news": {
+                  "headline": {
+                      "0": "Exxon investing $100 million in facility to produce cleaning alcohol for chip industry",
+                      "1": "Does ExxonMobil Have the Fuel to Grow Into a $1 Trillion Company?",
+                      "2": "Energy Is 2025’s Biggest Stock Market Winner. Don’t Expect It to Last.",
+                      "3": "Welcome to the age of Big Oil's managed decline: Bousso"
+                  },
+                  "summary": {
+                      "0": "Exxon Mobil saidon Wednesday it will spend $100 million to upgrade its BatonRouge, Louisiana, chemical plant to produce a highly pure formof isopropyl alcohol that is used in the tech industry to...",
+                      "1": "ExxonMobil (NYSE: XOM) is the 800-pound gorilla in the oil patch.  The energy giant currently has a market cap of more than $500 billion.  Last year, it generated $34 billion in earnings and $55 billion in operating cash flow, which led all international oil companies (IOCs).",
+                      "2": "The way oil and gas shares are performing may say more about the overall market than it says about the companies.",
+                      "3": "* Oil majors cut spending, boost shareholder returns amiduncertainty * Exxon..."
+                  },
+                  "url": {
+                      "0": "https://finnhub.io/api/news?id=ffa0f5e580aee5d1804f98439381b1804c83a76fd4d48343085e996ea1043a99",
+                      "1": "https://finnhub.io/api/news?id=febb50a8fc2b526a9a1a0e87f5f765d645c746493d1ddbe4822fe1c0e8f3a6dc",
+                      "2": "https://finnhub.io/api/news?id=799ea7c13e8cd4f4c29bb7a635039511fcb4845eb95a9f1d3009a5ba711f2b31",
+                      "3": "https://finnhub.io/api/news?id=756f737e27568234d06bf8ea2a9997eabccfb43f5d9c139891f7020f6edd1f3f"
+                  }
+              },
+              "name": "Exxon Mobil Corporation",
+              "description": "Exxon Mobil Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, the United Kingdom, Singapore, France, and internationally. It operates through Upstream, Energy Products, Chemical Products, and Specialty Products segments. The Upstream segment explores for and produces crude oil and natural gas. The Energy Products segment offers fuels, aromatics, and catalysts, as well as licensing services. The Chemical Products segment manufactures and sells petrochemicals, including olefins, polyolefins, and intermediates. The Specialty Products segment offers performance products, including finished lubricants, basestocks, waxes, synthetics, elastomers, and resins. The company is involved in the manufacture, trading, transportation, and sale of crude oil, natural gas, petroleum products, petrochemicals, and other specialty products; and pursuit of lower-emission and business opportunities, including carbon capture and storage, hydrogen, lower-emission fuels, Proxxima systems, carbon materials, and lithium. It sells its products under the Exxon, Esso, and Mobil brands. Exxon Mobil Corporation was founded in 1870 and is headquartered in Spring, Texas.",
+              "sector": "Energy",
+              "industry": "Oil & Gas Integrated",
+              "location": "Spring",
+              "country": "United States",
+              "founded_year": "N/A",
+              "website": "https://corporate.exxonmobil.com",
+              "price_earnings": "N/A"
+          }
+      }
+  ]
+}

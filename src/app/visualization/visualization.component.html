@@ -1,0 +1,21 @@
+@switch(metricName){
+  @case('recommendation_trends'){
+      <google-chart [data]="data" [type]="chartType" [dynamicResize]='true' [options]="options" [columns]="columns" style="width: 450px; align-content: center; align-items: center; align-self: center;"></google-chart>
+  }
+  <!-- @case('recommendation_trends'){
+    @let data = logThis();
+    <div>
+    </div>
+  } -->
+  @case('company_news'){
+    <div>
+      @let news = stock.metrics[metricName];
+      @let headlines = values(news['headline']);
+      @let urls = values(news['url']);
+      <a *ngFor="let headline of headlines; let i = index" target="_blank" href="{{urls[i]}}">{{headline}}<br></a>
+    </div>
+  }
+  @default {
+    <p>{{stock.metrics[metricName]}}</p>
+  }
+}

@@ -5,40 +5,140 @@
   padding: 0;
 }
 
-.container {
-  display: flex;
-  height: 100%;
+.ticker{
+  align-content: center;
+  justify-content: center;
 }
 
-.left {
-  width: 33.33%;
-  background-color: #ddd; 
+.loading{
   display: flex;
-  flex-direction: column; 
   justify-content: center;
-  align-items: center;
-  gap: 0px; 
-  padding: 0%; 
+  align-content: center;
+}
 
-  img {
-    max-width: 100%;
-    height: 50vh;
-    object-fit: cover;
+th, td {
+  display:table-cell;
+  overflow: scroll;
+  padding: 10px;
+  max-height: 100px;
+  width:max-content;
+  max-width: 500px;
+  background-color: rgb(26, 26, 26);
+  border: solid 1px #000;
+  border-style: none solid solid none;
+  a{
+    color: white !important;
   }
 }
 
-.right {
-  width: 66.67%;
-  background-color: rgb(36, 36, 36); //updated color to lighter gray
+.container {
   display: flex;
+  height: 100%;
+  background-color: #000000; //i think change this later?
+}
+
+tr th:first-child { border-top-left-radius: 10px;  border-bottom-left-radius: 10px; }
+tr th:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+tr td:first-child { border-top-left-radius: 10px;  border-bottom-left-radius: 10px; }
+tr td:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+tr:first-child td { border-top-style: solid; }
+tr td:first-child { border-left-style: solid; }
+
+.cell-content{
+  display: block;
+  height:100%;
+  text-wrap: wrap;
+  line-height: 1.5;
+  *{
+    text-wrap: normal;
+  }
+  overflow-y: scroll;
+  a, a:link, a:visited, a:focus, a:hover, a:active{
+    color: white !important;
+    text-decoration: none;
+  }
+}
+
+.table-container{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+table {
+  overflow-y: scroll;
+  height: 100%;
+  padding:5px;
+  border-spacing: 0 10px;
+  tr{
+    overflow-y: scroll;
+  }
+}
+
+.stocks-container{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  height: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+  // padding: 10px;
+  background-color: #000000; //i think change this later?
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  perspective: 600px;
+  // position: relative;
+  // perspective: 600px;
 }
 
 .angular-content {
-  width: 100%; 
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: grid;
+  grid-template-rows: 30% auto;
+  overflow-y: scroll;
+}
+
+.content{
+  overflow-y: scroll;
+}
+
+.back{
+  height: min-content;
+  border-radius: calc(infinity * 1px);
+  position: absolute;
+  background-color: transparent;
+  color: white;
+  border-width: 2px;
+  padding:10px 15px;
+  border-color: white;
+  font-size: 16px;
+}
+.back:hover{
+  background-color: white;
+  color: #000000;
+  border-color: #000000;
+}
+
+form{
+  display:flex;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .prompt {
@@ -66,7 +166,7 @@
   button {
     max-height: 5%;
     font-size: medium;
-    white-space: nowrap; 
+    white-space: nowrap;
     min-width: 100px !important;
   }
 }
@@ -75,13 +175,17 @@ input::placeholder {
   text-align: center;
 }
 
-.title {
+.title-container {
   text-align: center;
   font-size: 5em;
-  color: #dddbdb;
-  padding: 5%;
-  height: 10%;
-  margin-top: -350px;
+  align-self: center;
+}
+.title{
+  color: white;
+}
+.title:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .stocks {
