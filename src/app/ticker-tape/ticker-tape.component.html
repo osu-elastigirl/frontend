@@ -1,0 +1,23 @@
+<div class="ticker-tape-container">
+  <div class="ticker-tape">
+    <div class="ticker-items">
+      <ng-container *ngFor="let item of tickerData">
+        <span class="ticker-item">
+          <span class="symbol">{{item.symbol}}</span>
+          <span class="change-percent" [class.positive]="item.changePercent >= 0" [class.negative]="item.changePercent < 0">
+            {{formatChangePercent(item.changePercent)}}
+          </span>
+        </span>
+      </ng-container>
+      <!-- Duplicate the items to create a seamless loop -->
+      <ng-container *ngFor="let item of tickerData">
+        <span class="ticker-item">
+          <span class="symbol">{{item.symbol}}</span>
+          <span class="change-percent" [class.positive]="item.changePercent >= 0" [class.negative]="item.changePercent < 0">
+            {{formatChangePercent(item.changePercent)}}
+          </span>
+        </span>
+      </ng-container>
+    </div>
+  </div>
+</div>

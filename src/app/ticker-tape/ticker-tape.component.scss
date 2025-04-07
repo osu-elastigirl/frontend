@@ -1,0 +1,70 @@
+.ticker-tape-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 40px;
+  background-color: #000000;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ticker-tape {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-items {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  animation: ticker-scroll 45s linear infinite;
+  padding: 10px 0;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px; /* Increased padding for more spacing */
+  margin-right: 30px; /* Added margin for even more spacing */
+  height: 20px;
+}
+
+.symbol {
+  color: #ffffff;
+  font-weight: 600;
+  margin-right: 10px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.change-percent {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.change-percent.positive {
+  color: #4CAF50;
+}
+
+.change-percent.negative {
+  color: #F44336;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause animation on hover */
+.ticker-tape:hover .ticker-items {
+  animation-play-state: paused;
+}
