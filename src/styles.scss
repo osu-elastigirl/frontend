@@ -8,6 +8,7 @@ body{
   background-color: inherit;
   font-family: 'Quicksand';
   margin: 0 !important;
+  padding-top: 60px;
 }
 
 body *{
@@ -36,4 +37,14 @@ a{
 }
 a:active, a:hover{
   color: #a4a4a4;
+}
+
+/* Add padding to the main container */
+.container {
+  padding-top: 10px;
+}
+
+/* Make sure the angular-content starts below ticker tape */
+.angular-content {
+  margin-top: 10px;
 }

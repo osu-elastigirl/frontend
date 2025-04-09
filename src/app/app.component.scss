@@ -117,13 +117,16 @@ table {
 
 .back{
   height: min-content;
-  border-radius: calc(infinity * 1px);
+  border-radius: 20px;
   position: absolute;
   background-color: transparent;
   color: white;
   border-width: 2px;
-  padding:10px 15px;
+  padding: 10px 15px;
   border-color: white;
+  top: 60px; /* Position button below ticker tape */
+  left: 20px; /* Add some space from the left edge */
+  z-index: 999; /* Make sure it's below the ticker tape but above other content */
   font-size: 16px;
 }
 .back:hover{
