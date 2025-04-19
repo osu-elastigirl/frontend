@@ -114,20 +114,20 @@ interface TickerData {
 export class TickerTapeComponent implements OnInit {
   // More stocks to ensure we fill the ticker tape completely
   tickerData: TickerData[] = [
-    { symbol: 'AAPL', changePercent: 2.45 },
-    { symbol: 'MSFT', changePercent: 1.23 },
-    { symbol: 'GOOGL', changePercent: -0.82 },
-    { symbol: 'AMZN', changePercent: 3.16 },
-    { symbol: 'TSLA', changePercent: -1.47 },
-    { symbol: 'META', changePercent: 0.95 },
-    { symbol: 'NFLX', changePercent: -2.31 },
-    { symbol: 'XOM', changePercent: 1.58 },
-    { symbol: 'CVX', changePercent: 0.37 },
-    { symbol: 'COP', changePercent: 2.19 },
-    { symbol: 'JPM', changePercent: 0.83 },
-    { symbol: 'V', changePercent: 1.47 },
-    { symbol: 'WMT', changePercent: -0.34 },
-    { symbol: 'PG', changePercent: 0.65 }
+    { symbol: 'AAPL', changePercent: -7.3 },   // Apple
+    { symbol: 'MSFT', changePercent: 1.54 },   // Microsoft
+    { symbol: 'GOOGL', changePercent: -1.4 },  // Alphabet
+    { symbol: 'AMZN', changePercent: 0.70 },   // Amazon
+    { symbol: 'TSLA', changePercent: -0.075 }, // Tesla
+    { symbol: 'META', changePercent: -0.17 },  // Meta
+    { symbol: 'NFLX', changePercent: -4.4 },   // Netflix
+    { symbol: 'XOM', changePercent: -1.50 },   // Exxon Mobil
+    { symbol: 'CVX', changePercent: 2.14 },    // Chevron
+    { symbol: 'COP', changePercent: 8.01 },    // ConocoPhillips
+    { symbol: 'JPM', changePercent: -1.28 },   // JPMorgan Chase
+    { symbol: 'V', changePercent: 1.54 },      // Visa
+    { symbol: 'WMT', changePercent: -2.4 },    // Walmart
+    { symbol: 'PG', changePercent: 1.84 }      // Procter & Gamble
   ];
 
 
