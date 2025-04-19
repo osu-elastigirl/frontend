@@ -56,28 +56,28 @@
   backface-visibility: visible;
 }
 
-.front { 
-  background: #2196F3;
+.front {
+  background: #a4a4a4;
   transform: rotateY(0deg) translateZ(50px);
 }
-.back { 
-  background: #4CAF50;
+.back {
+  background: #a4a4a4;
   transform: rotateY(180deg) translateZ(50px);
 }
-.top { 
-  background: #FF9800;
+.top {
+  background: #a4a4a4;
   transform: rotateX(90deg) translateZ(50px);
 }
-.bottom { 
-  background: #9C27B0;
+.bottom {
+  background: #a4a4a4;
   transform: rotateX(-90deg) translateZ(50px);
 }
-.left { 
-  background: #F44336;
+.left {
+  background: #a4a4a4;
   transform: rotateY(-90deg) translateZ(50px);
 }
-.right { 
-  background: #FFEB3B;
+.right {
+  background: #a4a4a4;
   transform: rotateY(90deg) translateZ(50px);
 }
 
@@ -88,7 +88,7 @@
 
 th, td {
   display:table-cell;
-  overflow: scroll;
+  overflow: hidden;
   padding: 10px;
   max-height: 100px;
   width:max-content;
@@ -105,12 +105,11 @@ th, td {
 }
 
 table {
-  overflow-y: scroll;
-  height: 100%;
+  overflow: visible;
   padding:5px;
   border-spacing: 0 10px;
   tr{
-    overflow-y: scroll;
+    overflow: visible;
   }
   width: 100%;
 }
@@ -128,7 +127,7 @@ tr td:first-child { border-left-style: solid; }
   padding: 2%;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow: visible;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -139,15 +138,12 @@ tr td:first-child { border-left-style: solid; }
   display: flex;
   flex-direction: column;
   flex-grow: 0;
-  height: 100%;
   width:100%;
   justify-content: center;
   justify-items: center;
   align-content: center;
   align-items: center;
-  overflow-y: scroll;
+  overflow: visible;
 }
 
-*{
-  overflow-y: scroll;
-}
+/* Remove container-specific scrolling */

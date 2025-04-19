@@ -56,50 +56,51 @@ interface TickerData {
       overflow: hidden;
       z-index: 1000;
     }
-    
+
     .ticker-wrap {
       width: 100%;
       height: 100%;
       overflow: hidden;
       position: relative;
     }
-    
+
     .ticker-move {
       display: flex;
       white-space: nowrap;
-      padding-top: 12px;
+      padding-top: 10px;
       position: absolute;
       animation: ticker 30s linear infinite;
       width: 300%; /* Make it wide enough to contain all three copies */
     }
-    
+
     .ticker-item {
       display: inline-block;
       margin-right: 40px;
     }
-    
+
     .symbol {
       color: white;
       font-weight: bold;
       margin-right: 12px;
-      font-size: 18px;
+      font-size: 22px;
       font-family: monospace;
     }
-    
+
     .positive {
       color: #4CAF50;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 22px;
       font-family: monospace;
     }
-    
+
     .negative {
       color: #F44336;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 22px;
       font-family: monospace;
     }
-    
+
+
     @keyframes ticker {
       0% {
         transform: translateX(0);
@@ -129,6 +130,7 @@ export class TickerTapeComponent implements OnInit {
     { symbol: 'PG', changePercent: 0.65 }
   ];
 
+
   constructor() {}
 
   ngOnInit(): void {
@@ -138,4 +140,6 @@ export class TickerTapeComponent implements OnInit {
   formatChangePercent(changePercent: number): string {
     return (changePercent >= 0 ? '+' : '') + changePercent.toFixed(2) + '%';
   }
+
+
 }
