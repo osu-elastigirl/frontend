@@ -1,12 +1,8 @@
-
-
-form{
-  display:flex;
+form {
+  display: flex;
   width: 100%;
-  justify-items: center;
-  align-items: center;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .prompt {
@@ -41,4 +37,49 @@ form{
 
 input::placeholder {
   text-align: center;
+}
+
+.stock-visual-graph {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  background: transparent;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  /* Gradient stops */
+  .area-gradient stop:nth-child(1) {
+    stop-color: rgba(22, 88, 39, 0.6);
+    offset: 0%;
+  }
+  .area-gradient stop:nth-child(2) {
+    stop-color: rgba(22, 88, 39, 0.3);
+    offset: 50%;
+  }
+  .area-gradient stop:nth-child(3) {
+    stop-color: rgba(22, 88, 39, 0.05);
+    offset: 100%;
+  }
+
+  /* animate drawing of the line */
+  polyline#linePath {
+    fill: none;
+    stroke: rgb(22, 88, 39);
+    stroke-width: 2;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    animation: draw-line 8s ease-out forwards 0.5s;
+  }
+
+  @keyframes draw-line {
+    to { stroke-dashoffset: 0; }
+  }
 }
