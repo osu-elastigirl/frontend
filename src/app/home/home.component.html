@@ -6,4 +6,46 @@
   </form>
 </div>
 
+<!-- this will now actually appear once showGraph = true -->
+<div *ngIf="showGraph" class="stock-visual-graph">
+  <svg viewBox="0 0 500 100" preserveAspectRatio="none">
+    <defs>
+      <linearGradient
+        id="stockGradient"
+        x1="0" y1="0"
+        x2="0" y2="1"
+        class="area-gradient"
+      >
+        <stop/>
+        <stop/>
+        <stop/>
+      </linearGradient>
+    </defs>
+
+
+    <polygon
+      fill="url(#stockGradient)"
+      points="
+        0,100 15,27 30,36 45,75 60,65 75,40 90,60 105,65 120,55
+        135,70 150,50 165,60 180,45 195,38 210,50 225,54 240,60
+        255,63 270,62 285,70 300,75 315,85 330,95 345,83 360,93
+        375,89 390,90 405,95 420,80 435,90 460,95 480,50 490,20
+        500,0 500,100 0,100
+      "
+    />
+
+
+    <polyline
+      id="linePath"
+      points="
+        0,100 15,27 30,36 45,75 60,65 75,40 90,60 105,65 120,55
+        135,70 150,50 165,60 180,45 195,38 210,50 225,54 240,60
+        255,63 270,62 285,70 300,75 315,85 330,95 345,83 360,93
+        375,89 390,90 405,95 420,80 435,90 460,95 480,50 490,20
+        500,0
+      "
+    />
+  </svg>
+</div>
+
 <router-outlet></router-outlet>
