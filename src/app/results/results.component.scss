@@ -1,12 +1,94 @@
-.loading{
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.loading-text {
+  font-size: 32px;  /* Increased size */
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+
+.dots-container {
+  display: inline-block;
+  width: 30px;  /* Fixed width container */
+  text-align: left;
+  overflow: visible !important;
+}
+
+.cube-container {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  perspective: 1200px;
+  overflow: visible !important; /* Override the global overflow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: rotateCube 8s infinite linear;
+  overflow: visible !important; /* Override the global overflow */
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  overflow: visible !important; /* Override the global overflow */
+  backface-visibility: visible;
+}
+
+.front {
+  background: #a4a4a4;
+  transform: rotateY(0deg) translateZ(50px);
+}
+.back {
+  background: #a4a4a4;
+  transform: rotateY(180deg) translateZ(50px);
+}
+.top {
+  background: #a4a4a4;
+  transform: rotateX(90deg) translateZ(50px);
+}
+.bottom {
+  background: #a4a4a4;
+  transform: rotateX(-90deg) translateZ(50px);
+}
+.left {
+  background: #a4a4a4;
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.right {
+  background: #a4a4a4;
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+@keyframes rotateCube {
+   0% { transform: rotateX(45deg) rotateY(0deg) rotateZ(0deg); }
+   100% { transform: rotateX(45deg) rotateY(360deg) rotateZ(180deg); }
 }
 
 th, td {
   display:table-cell;
-  overflow: scroll;
+  overflow: hidden;
   padding: 10px;
   max-height: 100px;
   width:max-content;
@@ -23,12 +105,11 @@ th, td {
 }
 
 table {
-  overflow-y: scroll;
-  height: 100%;
+  overflow: visible;
   padding:5px;
   border-spacing: 0 10px;
   tr{
-    overflow-y: scroll;
+    overflow: visible;
   }
   width: 100%;
 }
@@ -46,7 +127,7 @@ tr td:first-child { border-left-style: solid; }
   padding: 2%;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow: visible;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -57,15 +138,12 @@ tr td:first-child { border-left-style: solid; }
   display: flex;
   flex-direction: column;
   flex-grow: 0;
-  height: 100%;
   width:100%;
   justify-content: center;
   justify-items: center;
   align-content: center;
   align-items: center;
-  overflow-y: scroll;
+  overflow: visible;
 }
 
-*{
-  overflow-y: scroll;
-}
+/* Remove container-specific scrolling */

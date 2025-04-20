@@ -1,5 +1,17 @@
 <div class="table-container">
-  <div *ngIf="loading" class="loading">Loading Data</div>
+  <div *ngIf="loading" class="loading">
+    <div class="loading-text">Loading Data<span class="dots-container">{{loadingDots}}</span></div>
+    <div class="cube-container">
+      <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+      </div>
+    </div>
+  </div>
   <div class="stocks-container" *ngIf="this.stocks.length > 0 && !loading">
 
     <table>

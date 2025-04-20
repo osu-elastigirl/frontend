@@ -4,10 +4,11 @@
 }
 
 body{
-  //background-color: rgb(36, 36, 36);
-  background-color: inherit;
+  background-color: #000000;
   font-family: 'Quicksand';
   margin: 0 !important;
+  padding-top: 60px; /* Only need space for ticker tape */
+  min-height: 100vh;
 }
 
 body *{
@@ -36,4 +37,16 @@ a{
 }
 a:active, a:hover{
   color: #a4a4a4;
+}
+
+/* Add padding to the main container */
+.container {
+  padding-top: 10px;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+/* Make sure the angular-content starts below ticker tape */
+.angular-content {
+  margin-top: 10px;
 }

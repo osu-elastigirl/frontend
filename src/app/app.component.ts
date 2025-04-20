@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HttpService } from './http.service';
 import { FormsModule, NgForm } from '@angular/forms';
+import { HttpService } from './http.service';
 import { StockComponent } from './stock/stock.component';
 import { Stock } from './stock';
 import { test_data } from '../assets/test_data.json';
@@ -10,11 +10,22 @@ import { HandlersService } from './handlers.service';
 import { GoogleChartsModule, ChartType } from 'angular-google-charts';
 import { VisualizationComponent } from './visualization/visualization.component';
 import { ResultsComponent } from './results/results.component';
-import { Router, RouterLink, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TickerTapeComponent } from './ticker-tape/ticker-tape.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, FormsModule, GoogleChartsModule, VisualizationComponent, ResultsComponent, RouterLink],
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    CommonModule,
+    FormsModule,
+    GoogleChartsModule,
+    VisualizationComponent,
+    ResultsComponent,
+    TickerTapeComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
