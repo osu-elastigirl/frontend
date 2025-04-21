@@ -47,7 +47,6 @@ export class VisualizationComponent implements OnInit {
         'color': 'white'
       },
       'direction': -1,
-      // 'textPosition': 'none',
     },
     'backgroundColor':{
       'fill': 'transparent',
@@ -55,6 +54,9 @@ export class VisualizationComponent implements OnInit {
     'tooltip':{
       'isHtml': true,
       'ignoreBounds': true,
+      'trigger': 'focus',
+      'container': 'body',
+      'position': 'absolute'
     },
     'bar':{
       'groupWidth': '10',

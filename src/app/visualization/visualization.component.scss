@@ -2,3 +2,46 @@
   height: 80%;
   // padding-top: 10px;
 }
+
+// Style for Google Charts tooltips
+.google-visualization-tooltip {
+  position: fixed !important;
+  z-index: 1000 !important;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: white !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+p{
+  text-align: left;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.news-link {
+  display: block;
+  padding: 12px 16px;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  border-left: 4px solid #4d980f;
+  font-size: 14px;
+  line-height: 1.4;
+
+  &:hover {
+    background-color: #2d2d2d;
+    transform: translateX(4px);
+    border-left-color: #4d980f;
+  }
+}

@@ -8,11 +8,11 @@
     </div>
   } -->
   @case('company_news'){
-    <div>
+    <div class="news-container">
       @let news = stock.metrics[metricName];
       @let headlines = values(news['headline']);
       @let urls = values(news['url']);
-      <a *ngFor="let headline of headlines; let i = index" target="_blank" href="{{urls[i]}}">{{headline}}<br></a>
+      <a *ngFor="let headline of headlines; let i = index" class="news-link" target="_blank" href="{{urls[i]}}">{{headline}}</a>
     </div>
   }
   @default {

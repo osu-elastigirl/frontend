@@ -86,30 +86,83 @@
    100% { transform: rotateX(45deg) rotateY(360deg) rotateZ(180deg); }
 }
 
+td{
+  height: 150px;
+}
+
 th, td {
-  display:table-cell;
-  overflow: hidden;
+  display: table-cell;
+  overflow: auto;
   padding: 10px;
-  max-height: 100px;
-  width:max-content;
+  max-height: 150px;
+  width: max-content;
   max-width: 500px;
   background-color: rgb(26, 26, 26);
   border: solid 1px #000;
   border-style: none solid solid none;
-  a{
+  a {
     color: white !important;
   }
-  align-content: center;
-  justify-content: center;
+  vertical-align: top;
+
+  // Different alignment for different columns
+  &.ticker {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .cell-content {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    text-align: left;
+    line-height: 1.4;
+    padding: 0 10px 0 0;
+
+    // Hide scrollbar by default but show on hover/interaction
+    &::-webkit-scrollbar {
+      width: 8px;
+      background: transparent;
+      opacity: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+
+    &:hover, &:focus {
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+// Style for table headers
+th {
   text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  padding: 15px 10px;
 }
 
 table {
   overflow: visible;
   padding:5px;
   border-spacing: 0 10px;
-  tr{
-    overflow: visible;
+  tr, td{
+    overflow: scroll;
   }
   width: 100%;
 }
